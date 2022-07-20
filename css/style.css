@@ -1,0 +1,161 @@
+:root {
+  /* COLOR VARIABLES */
+  --primary-color: #2f66f6;
+  --primary-shade: #0057b8;
+  --primary-tint: #e5e9fd;
+  --neutral-color: #0a0f29;
+  --surface-color: #ffffff;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 140%;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* ======= GENERAL REUSABLE CLASSES ======== */
+
+.container {
+  /* 1120px */
+  max-width: 70rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+/* ======= HEADER & NAV ======== */
+
+.logo {
+  font-family: 'Readex Pro', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.nav-link {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  color: var(--neutral-color);
+}
+
+.nav-link:hover {
+  background-color: var(--primary-tint);
+}
+
+.contact-link {
+  background-color: var(--primary-color);
+  color: var(--surface-color);
+  margin-left: 0.75rem;
+}
+
+.contact-link:hover {
+  background-color: var(--primary-shade);
+}
+
+header {
+  background: linear-gradient(180deg, #ecf3fb 0%, #ffffff 100%);
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+}
+
+.main-nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* mobile menu */
+
+.btn-mobile-nav {
+  background: none;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 2rem;
+  width: 2rem;
+  color: var(--neutral-color);
+}
+
+.icon-mobile-nav[name='close-outline'] {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name='close-outline'] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name='menu-outline'] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
