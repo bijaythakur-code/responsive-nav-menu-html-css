@@ -9,5 +9,5 @@ GitHub repo for my responsive navigation menu bar using HTML and CSS tutorial fo
 
 
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+(readme-img/responsive-nav-thumbnail.jpg)
 
