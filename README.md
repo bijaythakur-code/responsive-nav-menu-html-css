@@ -9,6 +9,5 @@ GitHub repo for my responsive navigation menu bar using HTML and CSS tutorial fo
 
 
 
-![DJ Events](/readme-img/responsive-nav-thumbnail.jpg 'DJ Events')
-(/readme-img/responsive-nav-thumbnail.jpg)
+![Responsive Navbar](/readme-img/responsive-nav-thumbnail.jpg)
 
